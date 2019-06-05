@@ -11,6 +11,16 @@
       <link rel="stylesheet" href="css/style.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+      <style type="text/css">
+        table {
+    counter-reset: tableCount;     
+}
+.counterCell:before {              
+    content: counter(tableCount); 
+    counter-increment: tableCount; 
+}
+      </style>
+
   
 </head>
 
@@ -37,22 +47,22 @@
       
      
     </div>
-	<!-- <p class="text-center mah_in">|| श्री ||</p>  -->
+  <!-- <p class="text-center mah_in">|| श्री ||</p>  -->
     <article class="invoicebody">
-	    <div class="left_info">
+      <div class="left_info">
         <div>
         <label style="">Name &emsp;      </label>
-	      <input style="width: 340px" type="text" class="clientDetails" id="company_name"  >
+        <input style="width: 340px" type="text" class="clientDetails" id="company_name"  >
         </div><br>
         <div>
         <label style="">Address  &emsp;    </label>
-	      <input style="width: 325px" type="text" class="clientDetails" id="customer_name"></div><br>
-	      <input style="width: 413px" type="text" class="clientDetails" id="occupation" ><br>
+        <input style="width: 325px" type="text" class="clientDetails" id="customer_name"></div><br>
+        <input style="width: 413px" type="text" class="clientDetails" id="occupation" ><br>
         <div style="margin-top: 20px">
         <label style="">Contact  &emsp;    </label>
-	      <input style="width: 330px" type="text" class="clientDetails" id="afm"  ></div><br>
-	     <!--  <input type="text" class="clientDetails" id="doy"           placeholder="Client Email"> -->
-		</div>
+        <input style="width: 330px" type="text" class="clientDetails" id="afm"  ></div><br>
+       <!--  <input type="text" class="clientDetails" id="doy"           placeholder="Client Email"> -->
+    </div>
       <table class="meta" id="top_data_table">
          <tbody>
           <tr class="" id="invoice_number_row">
@@ -78,7 +88,7 @@
 
         </tbody>
       </table>
-	<div class="min_height">
+  <div class="min_height">
       <table class="inventory">
         <thead>
           <tr>
@@ -104,7 +114,7 @@
 
         <tbody>
           <tr>
-            <td>
+            <td class="counterCell">
               <a class="cut" title="Remove Item">-</a>
               <span contenteditable></span>
             </td>
@@ -128,8 +138,8 @@
       </table>
       <a class="add noprint" title="Add Item">+</a>
       <div class="left_btn">
-      		<button class="mah_btn" onclick="myprint()">Print</button>
-      		<button class="mah_btn" onClick="window.location.reload()">Reset</button>
+          <button class="mah_btn" onclick="myprint()">Print</button>
+          <button class="mah_btn" onClick="window.location.reload()">Reset</button>
       </div>
       <div class="right_tax">
       <table class="balance" id="balance">
@@ -166,29 +176,29 @@
         </tbody>
       </table> 
       </div>     
-	</div>
+  </div>
     </article>
   </form>
 
-<div class="Signature" style="margin-top: -100px">
-	<ul>
-		<li>Client Signature</li>
-		<li>Owner Signature</li>
-	</ul>
-</div>
+<!-- <div class="Signature" style="margin-top: -100px">
+  <ul>
+    <li>Client Signature</li>
+    <li>Owner Signature</li>
+  </ul>
+</div> -->
 <div>
   <img width="700px"  src="spectra.png">
 
 </div>
 
 <div class="marathi info" style="margin-top: -20px">
-	
-		<p class="red" style="font-weight:700">Terms & Conditions :</p>
-		<p>1) Our Risks And Responsibilities when Goods Leave Our Per mises. </p>
-		<p>2) Goods Once sold can not be returned or Exchanged. </p>
-		<p>3) If consignment delivered by Transporter or delivery taken by Party Without the consignee copy of L.R. Both as fully responsible to make payment.</p>
-		<p>4) E. & O.E. Subject to Surat Jurisdiction.</p>
-		
+  
+    <p class="red" style="font-weight:700">Terms & Conditions :</p>
+    <p>1) Our Risks And Responsibilities when Goods Leave Our Per mises. </p>
+    <p>2) Goods Once sold can not be returned or Exchanged. </p>
+    <p>3) If consignment delivered by Transporter or delivery taken by Party Without the consignee copy of L.R. Both as fully responsible to make payment.</p>
+    <p>4) E. & O.E. Subject to Surat Jurisdiction.</p>
+    
 </div>
 <script>
 
