@@ -75,7 +75,7 @@
 
           <tr class="" id="invoice_number_row">
             <th class="bold"><span class="invoice" id="invoice">GSTIN No&nbsp;</span></th> 
-            <td id="time">24ABOPI3649A1ZW</td>
+            <td>24ABOPI3649A1ZW</td>
           </tr>
           
 
@@ -244,7 +244,7 @@
             MM = checkTime(times.getMonth() + 1),
             dd = checkTime(times.getDate())
             ;
-        document.getElementById('time').innerHTML = yy + "" + MM + "" + dd + "" + hh + "" + mm + "" + ss ;
+        document.getElementById('time').innerHTML = mm + "" + ss ;
         t = setTimeout(function () {
             startTime1()
         }, 500);
