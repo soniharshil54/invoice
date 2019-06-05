@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Invoice with GST</title>
+  
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  
+</head>
+
+<body>
+
+  <link rel="license" href="http://www.opensource.org/licenses/mit-license/">
+<body id="form">
+  <form>
+    <div style="padding-top: 30px;padding-bottom: 20px;text-align: center">
+      
+
+        <div style="width: 100%;display: inline; padding-top: 30px;padding-bottom: 30px;float: left">
+          <span style="font-size: 45px; font-weight: bold; color: #700000;display: inline">REBEL FIRE BOTTLES</span><br>
+          <span style="font-size: 16px; display: inline;padding-bottom: 30px">Shop No.5, Jay Gangeshwar Soc, Hirabaugh, Varachha Road, Surat.</span><br><br>
+          <span style="font-size: 18px;display: inline;margin-top: 20px"><!-- <i class="fa fa-phone" style="font-size:24px"></i> -->8866884946 &emsp; <!-- <i class="fa fa-phone" style="font-size:24px"></i> -->7069428421 &emsp;<!--  <i style="font-size:24px" class="fa">&#xf095;</i> -->9979368500</span>
+
+          </div>
+        <!-- <h2 style="font-size: 40px;background-color: red;color: white">Fire Bottles</h2> -->
+       <!--  <div style="width: 17%;display: inline;float: right;">
+         
+          
+        </div> -->
+
+      
+     
+    </div>
+	<!-- <p class="text-center mah_in">|| श्री ||</p>  -->
+    <article class="invoicebody">
+	    <div class="left_info">
+        <div>
+        <label style="">Name &emsp;      </label>
+	      <input style="width: 340px" type="text" class="clientDetails" id="company_name"  >
+        </div><br>
+        <div>
+        <label style="">Address  &emsp;    </label>
+	      <input style="width: 325px" type="text" class="clientDetails" id="customer_name"></div><br>
+	      <input style="width: 413px" type="text" class="clientDetails" id="occupation" ><br>
+        <div style="margin-top: 20px">
+        <label style="">Contact  &emsp;    </label>
+	      <input style="width: 330px" type="text" class="clientDetails" id="afm"  ></div><br>
+	     <!--  <input type="text" class="clientDetails" id="doy"           placeholder="Client Email"> -->
+		</div>
+      <table class="meta" id="top_data_table">
+         <tbody>
+          <tr class="" id="invoice_number_row">
+            <th class="bold"><span class="invoice" id="invoice">Invoice&nbsp;</span></th> 
+            <td id="time"></td>
+          </tr>
+
+          <tr class="" id="invoice_number_row">
+            <th class="bold"><span class="invoice" id="invoice">GSTIN No&nbsp;</span></th> 
+            <td id="time"></td>
+          </tr>
+          
+
+          <tr id="daterow">
+            <th class="bold"><span class="date" id="date">Date</span></th>
+            <td><span contenteditable=""><input type="date" id="theDate"></span></td>
+          </tr>
+
+          <tr class="" id="total_block">
+            <th class="bold"><span class="amount" id="amount">Ammout</span></th>
+            <td><span id="prefix">&#8377;</span><span></span></td>
+          </tr>
+
+        </tbody>
+      </table>
+	<div class="min_height">
+      <table class="inventory">
+        <thead>
+          <tr>
+            <th class="bold" style="width: 70px">
+              <span class="item" id="item">No</span>
+            </th>
+            <th class="bold" style="width: 230px;">
+              <span class="description" id="description">Description</span>
+            </th>
+             <th class="bold">
+              <span class="rate" id="rate">Rate</span>
+            </th>
+             <th class="bold">
+              <span class="quantity" id="quantity">Quantity</span>
+            </th>
+           
+           
+            <th class="bold">
+              <span class="price" id="price">Amount</span>
+            </th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>
+              <a class="cut" title="Remove Item">-</a>
+              <span contenteditable></span>
+            </td>
+            <td>
+              <span contenteditable></span>
+              </td>
+              <td>
+              <span data-prefix>&#8377;</span>
+              <span contenteditable>0</span>
+            </td>
+              <td>
+              <span contenteditable>1</span>
+            </td>
+            
+            
+            <td>
+              <span data-prefix>&#8377;</span><span>0.00</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <a class="add noprint" title="Add Item">+</a>
+      <div class="left_btn">
+      		<button class="mah_btn" onclick="myprint()">Print</button>
+      		<button class="mah_btn" onClick="window.location.reload()">Reset</button>
+      </div>
+      <div class="right_tax">
+      <table class="balance" id="balance">
+        <tbody>
+
+          <tr>
+            <th class="bold">
+              <span class="subtotal" id="subtotal">Subtotal</span>
+            </th>
+            <td>
+              <span>&#8377;</span><span>0.00</span>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="bold">
+              <span class="tax" id="tax" contenteditable="">Include GST&nbsp;</span>
+              <span contenteditable="">18</span>%
+            </th>
+            <td>
+              <span>&#8377;</span><span>0.00</span>
+            </td>
+          </tr>
+
+          <tr>
+            <th class="bold">
+              <span class="total" id="total">Total</span>
+            </th>
+            <td>
+              <span>&#8377; </span><span>0.00</span>
+            </td>
+          </tr>
+
+        </tbody>
+      </table> 
+      </div>     
+	</div>
+    </article>
+  </form>
+
+<div class="Signature" style="margin-top: -100px">
+	<ul>
+		<li>Client Signature</li>
+		<li>Owner Signature</li>
+	</ul>
+</div>
+<div>
+  <img width="700px"  src="spectra.png">
+
+</div>
+
+<div class="marathi info" style="margin-top: -20px">
+	
+		<p class="red" style="font-weight:700">Terms & Conditions :</p>
+		<p>1) Our Risks And Responsibilities when Goods Leave Our Per mises. </p>
+		<p>2) Goods Once sold can not be returned or Exchanged. </p>
+		<p>3) If consignment delivered by Transporter or delivery taken by Party Without the consignee copy of L.R. Both as fully responsible to make payment.</p>
+		<p>4) E. & O.E. Subject to Surat Jurisdiction.</p>
+		
+</div>
+<script>
+
+(function () {
+    function checkTime(i) {
+        return (i < 10) ? "0" + i : i;
+    }
+
+    function startTime() {
+        var times = new Date(),
+        
+            hh = checkTime(times.getHours()),
+            mm = checkTime(times.getMinutes()),
+            ss = checkTime(times.getSeconds()),
+            yy = checkTime(times.getFullYear().toString(10).substring(2, 4)),
+            MM = checkTime(times.getMonth() + 1),
+            dd = checkTime(times.getDate())
+            ;
+        document.getElementById('time').innerHTML = yy + "" + MM + "" + dd + "" + hh + "" + mm + "" + ss ;
+        t = setTimeout(function () {
+            startTime1()
+        }, 500);
+    }
+    startTime();
+})();
+
+var date = new Date();
+
+var day = date.getDate();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+
+if (month < 10) month = "0" + month;
+if (day < 10) day = "0" + day;
+
+var today = year + "-" + month + "-" + day;
+
+
+document.getElementById('theDate').value = today;
+</script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
